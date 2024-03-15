@@ -1,7 +1,10 @@
+export interface UserInfo {
+  name: string;
+  mail: string;
+  phoneNumber: string;
+  contactMethod: string;
+}
+
 export default class User {
-  constructor(name: string, mail: string, tel: number) {
-    this.name = name;
-    this.mail = mail;
-    this.tel = tel;
-  }
+  constructor(public userInfo: UserInfo) {}
 }
