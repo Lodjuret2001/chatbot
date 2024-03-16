@@ -27,7 +27,7 @@ rl.on("line", (answer: string) => {
 
 rl.on("close", () => {
   console.log(
-    "Thank you for using our ChatBot! The chat will automatically close in 3 seconds. Feel free to reach out to us if you have any other questions! :)"
+    "Thank you for using our Agencys ChatBot! The chat will automatically close in 3 seconds. Feel free to reach out to us if you have any other questions! :)"
   );
   setTimeout(() => {
     resetInputs();
