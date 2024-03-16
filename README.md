@@ -11,7 +11,7 @@ To get started with the ChatBot application, follow these steps:
 1. Clone the repository:
 
 ```
-git clone <https://github.com/Lodjuret2001/chatbot>
+git clone https://github.com/Lodjuret2001/chatbot
 ```
 
 2. Navigate to the project directory:
@@ -46,4 +46,4 @@ Contributions are welcome! If you'd like to contribute to this project, please m
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+This project is licensed under the MIT License.
