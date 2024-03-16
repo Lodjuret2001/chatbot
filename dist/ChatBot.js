@@ -22,7 +22,7 @@ const subTopics = {
 };
 export default class ChatBot {
     introduction() {
-        console.log("Welcome to PixlMedias Agency help chat!");
+        console.log("Welcome to Agencys help chat!");
         console.log("How can we assist you today?");
         console.log(`1. ${"Websites"}`);
         console.log(`2. ${"Ecommerce"}`);
@@ -72,7 +72,7 @@ export default class ChatBot {
     displayLinkAndConsent(topic, subtopic) {
         const hyphenTopic = topic.toLowerCase().replace(/[\s&]+/g, "-");
         const hyphenSubtopic = subtopic.toLowerCase().replace(/[\s/]+/g, "-");
-        console.log(`Here can you can read more about ${subtopic}: https://www.pixlmedia.se/${hyphenTopic}/${hyphenSubtopic}`);
+        console.log(`Here can you can read more about ${subtopic}: https://www.agency.com/${hyphenTopic}/${hyphenSubtopic}`);
         console.log(`Would you like us to reach out to you, and connect you with a expert in ${subtopic}?`);
     }
 }
