@@ -44,7 +44,7 @@ export default class ChatBot {
     console.log("(type 'exit' to leave)");
   }
 
-  handleUserInput(answer: string): string {
+  handleUserInput(answer: string): string | undefined {
     const choice = parseInt(answer);
     switch (choice) {
       case 1:
@@ -58,20 +58,18 @@ export default class ChatBot {
 
       default:
         console.log("Invalid choice. Please choose a number between 1 and 4.");
-        return "NotValidTopic";
+        return undefined;
     }
   }
-  askSubTopicQuestions(topic: string) {
-    console.log(`Alright! What do you need help with regarding ${topic}?`);
-  }
   displaySubTopics(topic: string) {
+    console.log(`Alright! What do you need help with regarding ${topic}?`);
     const selectedSubTopic = subTopics[topic];
     selectedSubTopic.forEach((subtopic) => {
       console.log(`${subtopic.select}. ${subtopic.name}`);
     });
-    console.log("(type 'exit' to leave)");
+    console.log("('back' or 'exit' to leave)");
   }
-  handleUserInput2(topic: string, answer: string): string {
+  handleUserInput2(topic: string, answer: string): string | undefined {
     const subtopic = subTopics[topic];
     const choice = parseInt(answer);
     switch (choice) {
@@ -84,22 +82,17 @@ export default class ChatBot {
 
       default:
         console.log("Invalid choice. Please choose a number between 1 and 3.");
-        return "NotValidSubTopic";
+        return undefined;
     }
   }
-  displayWebsiteLink(topic: string, subtopic: string) {
-    const cleanTopic = topic.toLowerCase().replace(/[\s&]+/g, "");
+  displayLinkAndConsent(topic: string, subtopic: string) {
+    const hyphenTopic = topic.toLowerCase().replace(/[\s&]+/g, "-");
     const hyphenSubtopic = subtopic.toLowerCase().replace(/[\s/]+/g, "-");
     console.log(
-      `Here can you can read more about ${subtopic}: https://www.pixlmedia.se/${cleanTopic}/${hyphenSubtopic}`
+      `Here can you can read more about ${subtopic}: https://www.pixlmedia.se/${hyphenTopic}/${hyphenSubtopic}`
     );
-  }
-  askForContact(subtopic: string) {
     console.log(
       `Would you like us to reach out to you, and connect you with a expert in ${subtopic}?`
     );
-  }
-  handleUserInput3(){
-
   }
 }

@@ -43,18 +43,16 @@ export default class ChatBot {
                 return "Graphic Design";
             default:
                 console.log("Invalid choice. Please choose a number between 1 and 4.");
-                return "NotValidTopic";
+                return undefined;
         }
     }
-    askSubTopicQuestions(topic) {
-        console.log(`Alright! What do you need help with regarding ${topic}?`);
-    }
     displaySubTopics(topic) {
+        console.log(`Alright! What do you need help with regarding ${topic}?`);
         const selectedSubTopic = subTopics[topic];
         selectedSubTopic.forEach((subtopic) => {
             console.log(`${subtopic.select}. ${subtopic.name}`);
         });
-        console.log("(type 'exit' to leave)");
+        console.log("('back' or 'exit' to leave)");
     }
     handleUserInput2(topic, answer) {
         const subtopic = subTopics[topic];
@@ -68,18 +66,14 @@ export default class ChatBot {
                 return subtopic[2].name;
             default:
                 console.log("Invalid choice. Please choose a number between 1 and 3.");
-                return "NotValidSubTopic";
+                return undefined;
         }
     }
-    displayWebsiteLink(topic, subtopic) {
-        const cleanTopic = topic.toLowerCase().replace(/[\s&]+/g, "");
+    displayLinkAndConsent(topic, subtopic) {
+        const hyphenTopic = topic.toLowerCase().replace(/[\s&]+/g, "-");
         const hyphenSubtopic = subtopic.toLowerCase().replace(/[\s/]+/g, "-");
-        console.log(`Here can you can read more about ${subtopic}: https://www.pixlmedia.se/${cleanTopic}/${hyphenSubtopic}`);
-    }
-    askForContact(subtopic) {
+        console.log(`Here can you can read more about ${subtopic}: https://www.pixlmedia.se/${hyphenTopic}/${hyphenSubtopic}`);
         console.log(`Would you like us to reach out to you, and connect you with a expert in ${subtopic}?`);
-    }
-    handleUserInput3() {
     }
 }
 //# sourceMappingURL=ChatBot.js.map
