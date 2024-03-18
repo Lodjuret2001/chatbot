@@ -29,4 +29,3 @@ rl.on("close", () => {
 chatBot.introduction();
 rl.prompt();
 export { rl };
-//# sourceMappingURL=index.js.map

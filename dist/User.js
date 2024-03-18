@@ -3,4 +3,3 @@ export default class User {
         this.userInfo = userInfo;
     }
 }
-//# sourceMappingURL=User.js.map

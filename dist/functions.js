@@ -90,4 +90,3 @@ function resetInputs() {
     inputs.consent = false;
 }
 export { inputs, handleTopicInput, handleSubTopicInput, handleContactInput, getContactInfo, resetInputs, };
-//# sourceMappingURL=functions.js.map
