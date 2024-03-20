@@ -96,3 +96,5 @@ export default class ChatBot {
     );
   }
 }
+
+export { Topics, subTopics };
