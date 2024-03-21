@@ -105,7 +105,7 @@ function getContactInfo() {
   });
 }
 
-function resetInputs() {
+function resetInputs(): undefined {
   inputs.topic = undefined;
   inputs.subtopic = undefined;
   inputs.consent = false;

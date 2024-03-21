@@ -1,4 +1,4 @@
-# ChatBot App
+# ChatBot Application
 
 ## Overview
 
@@ -39,6 +39,18 @@ npm start
 Upon running the application, the ChatBot will introduce itself and prompt the user for input. Users can interact with the ChatBot by providing input through the command line.
 
 The ChatBot will guide users through the conversation based on their inputs. Users can select topics and subtopics to receive relevant information and assistance.
+
+## Testing
+
+The ChatBot application includes unit tests to ensure its functionality remains intact as the codebase evolves. The tests are written using Jest, a popular testing framework for JavaScript and TypeScript applications.
+
+To run the unit tests, execute the following command:
+
+```
+npm test
+```
+
+Jest will execute all test suites in the project and provide feedback on the test results. Make sure all tests pass before making changes to the codebase.
 
 ## Contributing
 
