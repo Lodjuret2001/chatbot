@@ -55,30 +55,36 @@ describe("displaySubTopics", () => {
 describe("handleUserInput2", () => {
   const testCases = [
     {
-      input1: Topics.Websites,
-      input2: "1",
+      input1: "1",
+      input2: Topics.Websites,
       output: subTopics[Topics.Websites][0].name,
     },
     {
-      input1: Topics.Websites,
-      input2: "2",
+      input1: "2",
+      input2: Topics.Websites,
       output: subTopics[Topics.Websites][1].name,
     },
     {
-      input1: Topics.Websites,
-      input2: "3",
+      input1: "3",
+      input2: Topics.Websites,
       output: subTopics[Topics.Websites][2].name,
     },
-    { input1: Topics.Websites, input2: "4", output: undefined },
-    { input1: Topics.Websites, input2: "", output: undefined },
-    { input1: Topics.Websites, input2: "0", output: undefined },
-    { input1: Topics.Websites, input2: "123", output: undefined },
-    { input1: Topics.Websites, input2: "abcdefg", output: undefined },
+    { input1: "4", input2: Topics.Websites, output: undefined },
+    { input1: "", input2: Topics.Websites, output: undefined },
+    { input1: "0", input2: Topics.Websites, output: undefined },
+    { input1: "123", input2: Topics.Websites, output: undefined },
+    { input1: "abcdefg", input2: Topics.Websites, output: undefined },
   ];
+
   testCases.forEach((test) => {
     const { input1, input2, output } = test;
-
-    expect(chatbot.handleUserInput2(input1, input2)).toEqual(output);
+    const expectation =
+      output === undefined
+        ? `Should return undefined`
+        : `Should return ${output} when input is ${input1} and ${input2}`;
+    it(expectation, () => {
+      expect(chatbot.handleUserInput2(input2, input1)).toEqual(output);
+    });
   });
 });
 
