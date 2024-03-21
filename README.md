@@ -59,4 +59,3 @@ Contributions are welcome! If you'd like to contribute to this project, please m
 ## License
 
 This project is licensed under the MIT License.
-```
